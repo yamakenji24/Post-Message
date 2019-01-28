@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PostMessage</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="header-logo">
+        <%= link_to("Postmessage", "/") %>
+      </div>
+      <ul class="header-menus">
+        <li><%= link_to("Postmessageとは", "/about") %></li>
+        <li><%= link_to("記事一覧", "/post/index") %></li>
+        <li><%= link_to("新規記事", "/post/new") %></li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>
