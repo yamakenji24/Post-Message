@@ -6,7 +6,7 @@ class PostController < ApplicationController
 
   def show
     @post = Post.find_by(id:params[:id])
-    @message = Message.all
+    @message = Message.where(postid: @post.id)
   end
 
   def new
