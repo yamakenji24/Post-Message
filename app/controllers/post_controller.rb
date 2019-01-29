@@ -19,7 +19,7 @@ class PostController < ApplicationController
   end
   def save
     @post = Post.find_by(id:params[:id])
-    @message = Post.new(postid: @post.id, content: params[:content])
+    @message = Message.new(postid: @post.id, content: params[:content])
     @message.save
     redirect_to("/post/#{@post.id}")
   end

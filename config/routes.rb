@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   post "post/create" => "post#create"
   
-  post "post/save" => "post#save"
+  post "post/:id/save" => "post#save"
   
   get "post/new" => "post#new"
   get "about" => "home#about"

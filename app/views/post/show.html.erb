@@ -11,12 +11,14 @@
           </div>
         <% end %>
       </p>
-       <div class="form">
+      <%= form_tag("/post/#{@post.id}/save") do %>
+      <div class="form">
           <div class="form-body">
             <textarea name="content"></textarea>
             <input type="submit" value="投稿">
           </div>
-        </div>
+      </div>
+      <% end %>
 
     </div>
   </div>
